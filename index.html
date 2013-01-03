@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageUploader：图片上传组件</title>
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/doc.css" />
+    <script src="assets/modernizr.custom.79639.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+
+<div class="menu-panel">
+    <h3>教程目录</h3>
+    <ul id="menu-toc" class="menu-toc">
+        <li class="menu-toc-current"><a href="#imageUploaderDec">综述和导航</a></li>
+        <li><a href="#item2">简单使用</a></li>
+        <li><a href="#item3">与服务器端的交互</a></li>
+        <li><a href="#item4">上传验证控制</a></li>
+        <li><a href="#item5">渲染默认队列数据</a></li>
+
+    </ul>
+</div>
+
+<div class="bb-custom-wrapper">
+<div id="bb-bookblock" class="bb-bookblock">
+<div class="bb-item" id="imageUploaderDec">
+    <div class="content">
+        <div class="scroller">
+            <h2>ImageUploader：图片上传组件</h2>
+            <p>ImageUploader继承于Uploader，用于解决Uploader过于复杂，调用不便的问题，ImageUploader专门用于图片上传，自带图片验证，改进了伪属性配置方式。</p>
+            <div class="alert alert-info">文件上传请使用<a href="../fileUploader/index.html">FileUploader</a>。</div>
+            <h4>ImageUploader的特性</h4>
+            <ul>
+                <li>支持ajax、flash、iframe三方案，兼容所有浏览器。</li>
+                <li>多主题支持，可以自己定制主题</li>
+                <li>支持多选批量上传</li>
+                <li>支持上传进度显示</li>
+                <li>支持取消上传</li>
+                <li>支持图片预览（使用flash上传不支持）</li>
+                <li>支持上传验证</li>
+                <li>多种配置方式</li>
+            </ul>
+            <h2 id="demos">demo汇总</h2>
+
+            <p>文档内容非常详实，为了方便大家快速使用，将文档中的demo做了提取，即拿即用。</p>
+            <ul class="thumbnails">
+                <li class="span3">
+                    <a href="./js-config-use.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            简单demo：js配置上传组件
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="./pro-config-use.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            简单demo：属性配置上传组件
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="./auth.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            上传验证控制的demo
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="./events.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            组件全部事件演示
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="default-data-show.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            渲染默认队列数据的demo
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="queue.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            图片队列控制的demo
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="flash-upload-type.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            只使用flash上传的demo
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="iframe-upload-type.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            只使用iframe上传的demo
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            常用属性控制
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            常用方法控制
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <h2 id="themes">ImageUploader内置的主题</h2>
+            <ul class="thumbnails">
+                <li class="span3">
+                    <a href="theme-imageUploader.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            <h4>主题：imageUploader</h4>
+                            <img alt="imageUploader" src="http://www.36ria.com/wp-content/uploads/2012/08/imageUploader.png">
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="theme-refundUploader.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            <h4>主题：refundUploader</h4>
+                            <img alt="refundUploader" src="http://www.36ria.com/wp-content/uploads/2012/08/refundUploader.png">
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="theme-loveUploader.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            <h4>主题：loveUploader</h4>
+                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/05/uploader.png">
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="theme-ershouUploader.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            <h4>主题：ershouUploader</h4>
+                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/03/uploader-theme-3-400x138.png">
+                        </div>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a href="theme-singleImageUploader.html" class="demo-item" target="_blank">
+                        <div class="thumbnail">
+                            <h4>singleImageUploader</h4>
+                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/11/singleImageUploader.png">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bb-item" id="item2">
+    <div class="content">
+        <div class="scroller">
+            <h2>简单使用</h2>
+        </div>
+    </div>
+</div>
+<div class="bb-item" id="item3">
+    <div class="content">
+        <div class="scroller">
+            <h2>与服务器端的交互</h2>
+        </div>
+    </div>
+</div>
+<div class="bb-item" id="item4">
+    <div class="content">
+        <div class="scroller">
+            <h2>上传验证控制</h2>
+
+        </div>
+    </div>
+</div>
+<div class="bb-item" id="item5">
+    <div class="content">
+        <div class="scroller">
+            <h2>渲染默认队列数据</h2>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<nav>
+    <span id="bb-nav-prev">&larr;</span>
+    <span id="bb-nav-next">&rarr;</span>
+</nav>
+
+<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+</div>
+
+</div><!-- /container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="assets/jquery.plugins.min.js"></script>
+<script src="./assets/page.js"></script>
+<script>
+    $(function() {
+
+        Page.init();
+
+    });
+</script>
+</body>
+</html>
