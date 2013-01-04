@@ -24,13 +24,12 @@ body {
 }
 
 a {
-	color: #555;
 	text-decoration: none;
 	outline: none;
 }
 
 a:hover {
-	color: #000;
+	color: #555;
 }
 
 /* Content Flip Style */
@@ -204,7 +203,7 @@ a:hover {
 }
 
 .jspDrag {
-    background: #fff;
+    background: #574192;
     position: relative;
     box-shadow: inset -1px 0 8px rgba(0,0,0,0.05);
     top: 0;
@@ -212,6 +211,9 @@ a:hover {
     border-radius: 5px;
     border: 1px solid #f0f0f0;
     cursor: pointer;
+}
+.jspDrag:hover{
+    background: #877192;
 }
 
 .jspCorner {
@@ -249,7 +251,7 @@ a:hover {
 }
 
 .menu-panel {
-	background: #6188a0;
+	background: #574192;
 	width: 240px;
 	height: 100%;
 	position: fixed;
@@ -275,21 +277,19 @@ a:hover {
 .menu-toc {
 	list-style: none;
 }
-
 .menu-toc li a {
 	display: block;
 	color: #fff;
-	font-size: 1.1em;
-	line-height: 3.5;
+	font-size: 16px;
+	line-height: 42px;
 	padding: 0 20px;
 	cursor: pointer;
-	background: #6188a0;
-	border-bottom: 1px solid #5b8096;
+	background: #574192;
 }
 
 .menu-toc li a:hover,
 .menu-toc li.menu-toc-current a{
-	background: #5b8096;
+	background: #433371;
 }
 
 .menu-panel div {
@@ -326,10 +326,10 @@ a:hover {
 .menu-button {
 	position: absolute;
 	width: 32px;
-	height: 32px;
-	top: 0;
+	height: 30px;
+	top: 2px;
 	left: 0;
-	background: #6188a0;
+	background: #574192;
 	border-radius: 50%;
 	color: #fff;
 	line-height: 30px;
@@ -337,6 +337,7 @@ a:hover {
 	speak: none;
 	font-weight: bold;
 	cursor: pointer;
+    font-size: 22px;
 }
 
 .bb-custom-wrapper nav span:hover,
@@ -374,10 +375,10 @@ a:hover {
 
 .js .content {
 	position: absolute;
-	top: 60px;
+	top: 70px;
 	left: 0;
 	width: 100%;
-	bottom: 50px;
+	bottom: 10px;
 	overflow: hidden;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
@@ -414,12 +415,12 @@ a:hover {
 .content h2 {
 	font-weight: bold;
 	font-size: 2em;
-	padding: 0 0 10px;
 	color: #333;
-	margin: 0 1% 40px;
+	margin-bottom: 40px;
 	text-align: left;
 	box-shadow: 0 10px 0 rgba(0,0,0,0.02);
 	text-shadow: 0 0 2px #fff;
+    padding-bottom:10px;
 }
 
 .no-js .content h2 {
@@ -427,11 +428,8 @@ a:hover {
 }
 
 .content p {
-	font-size: 1.2em;
-	line-height: 1.6;
-	font-weight: 300;
-	padding: 5px 8%;
-	text-align: justify;
+    line-height: 32px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 800px){
@@ -462,8 +460,7 @@ a:hover {
 /* Body and structure
 -------------------------------------------------- */
 body {
-    font-family: "Î¢ÈíÑÅºÚ" !important;
-    font-size: 14px;
+    font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'Microsoft YaHei' !important;
@@ -1317,8 +1314,11 @@ form.well {
 
 }
 
+ul {
+    margin-left:60px;
+}
 ul li {
-    line-height: 28px;
+    line-height: 32px;
 }
 
 .thumbnail h4 {
@@ -1628,4 +1628,15 @@ h3{
 }
 .menu-toc li a:hover{
     text-decoration: none;
+}
+
+.bb-item a.btn-download, .bb-item a.btn-view-demo{
+    text-indent: -3000px;
+    display: block;
+    width: 160px;
+    height: 43px;
+    background: url(http://www.36ria.com/wp-content/themes/36ria3.0/images/btn.png) 0 0 no-repeat;
+}
+.bb-item a.btn-download:hover{
+    background-position: 0 -57px;
 }

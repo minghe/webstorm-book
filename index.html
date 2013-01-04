@@ -1,218 +1,189 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImageUploader：图片上传组件</title>
+    <title>Webstorm入门指南</title>
     <link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/bootstrap-responsive.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/doc.css" />
+    <link rel="stylesheet" type="text/css" href="assets/doc.css"/>
     <script src="assets/modernizr.custom.79639.js"></script>
 </head>
 <body>
 <div id="container" class="container">
 
-<div class="menu-panel">
-    <h3>教程目录</h3>
-    <ul id="menu-toc" class="menu-toc">
-        <li class="menu-toc-current"><a href="#imageUploaderDec">综述和导航</a></li>
-        <li><a href="#item2">简单使用</a></li>
-        <li><a href="#item3">与服务器端的交互</a></li>
-        <li><a href="#item4">上传验证控制</a></li>
-        <li><a href="#item5">渲染默认队列数据</a></li>
+    <div class="menu-panel">
+        <h3>教程目录</h3>
+        <ul id="menu-toc" class="menu-toc J_Menu">
+            <li class="menu-toc-current"><a href="#index">Webstorm简介</a></li>
+            <li><a href="#install">安装和配置</a></li>
+            <li><a href="">工程和界面</a></li>
+            <li><a href="">插件/配色的使用</a></li>
+            <li><a href="">常用快捷键</a></li>
+            <li><a href="">git集成</a></li>
+            <li><a href="">利用jsdoc提高自动提示</a></li>
+            <li><a href="">template</a></li>
+            <li><a href="">JsTestDriver的使用</a></li>
+            <li><a href="">语言支持</a></li>
+            <li><a href="">cookbook</a></li>
 
-    </ul>
-</div>
-
-<div class="bb-custom-wrapper">
-<div id="bb-bookblock" class="bb-bookblock">
-<div class="bb-item" id="imageUploaderDec">
-    <div class="content">
-        <div class="scroller">
-            <h2>ImageUploader：图片上传组件</h2>
-            <p>ImageUploader继承于Uploader，用于解决Uploader过于复杂，调用不便的问题，ImageUploader专门用于图片上传，自带图片验证，改进了伪属性配置方式。</p>
-            <div class="alert alert-info">文件上传请使用<a href="../fileUploader/index.html">FileUploader</a>。</div>
-            <h4>ImageUploader的特性</h4>
-            <ul>
-                <li>支持ajax、flash、iframe三方案，兼容所有浏览器。</li>
-                <li>多主题支持，可以自己定制主题</li>
-                <li>支持多选批量上传</li>
-                <li>支持上传进度显示</li>
-                <li>支持取消上传</li>
-                <li>支持图片预览（使用flash上传不支持）</li>
-                <li>支持上传验证</li>
-                <li>多种配置方式</li>
-            </ul>
-            <h2 id="demos">demo汇总</h2>
-
-            <p>文档内容非常详实，为了方便大家快速使用，将文档中的demo做了提取，即拿即用。</p>
-            <ul class="thumbnails">
-                <li class="span3">
-                    <a href="./js-config-use.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            简单demo：js配置上传组件
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="./pro-config-use.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            简单demo：属性配置上传组件
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="./auth.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            上传验证控制的demo
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="./events.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            组件全部事件演示
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="default-data-show.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            渲染默认队列数据的demo
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="queue.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            图片队列控制的demo
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="flash-upload-type.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            只使用flash上传的demo
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="iframe-upload-type.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            只使用iframe上传的demo
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            常用属性控制
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            常用方法控制
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <h2 id="themes">ImageUploader内置的主题</h2>
-            <ul class="thumbnails">
-                <li class="span3">
-                    <a href="theme-imageUploader.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            <h4>主题：imageUploader</h4>
-                            <img alt="imageUploader" src="http://www.36ria.com/wp-content/uploads/2012/08/imageUploader.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="theme-refundUploader.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            <h4>主题：refundUploader</h4>
-                            <img alt="refundUploader" src="http://www.36ria.com/wp-content/uploads/2012/08/refundUploader.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="theme-loveUploader.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            <h4>主题：loveUploader</h4>
-                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/05/uploader.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="theme-ershouUploader.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            <h4>主题：ershouUploader</h4>
-                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/03/uploader-theme-3-400x138.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="span3">
-                    <a href="theme-singleImageUploader.html" class="demo-item" target="_blank">
-                        <div class="thumbnail">
-                            <h4>singleImageUploader</h4>
-                            <img alt="uploader" src="http://www.36ria.com/wp-content/uploads/2012/11/singleImageUploader.png">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        </ul>
     </div>
-</div>
-<div class="bb-item" id="item2">
-    <div class="content">
-        <div class="scroller">
-            <h2>简单使用</h2>
+
+    <div class="bb-custom-wrapper">
+        <div id="bb-bookblock" class="bb-bookblock">
+            <div class="bb-item" id="index">
+                <div class="content">
+                    <div class="scroller">
+                        <div class="row">
+                            <div class="span4">
+                                <img src="http://www.36ria.com/wp-content/uploads/2013/01/webstorm-book-index.png"
+                                     width="350" height="450"/>
+                            </div>
+                            <div class="span7">
+                                <h2>Webstorm简介</h2>
+                                <ul>
+                                    <li>用途：功能强大的前端专用IDE，拥有即时编辑（chrome）、自动完成、debugger、Zen Coding、HTML5
+                                        支持、JSLint、Less支持、CoffeeScript支持、Node.JS、单元测试、集成git和svn版本控制等特性，推荐前端工程师使用。
+                                    </li>
+                                    <li>版本：5.0</li>
+                                    <li><a href="http://www.jetbrains.com/idea/documentation/index.jsp" target="_blank">英文文档</a>
+                                    </li>
+                                    <li><a href="http://plugins.intellij.net/" target="_blank">插件库</a></li>
+                                </ul>
+                                <p>Idea、
+                                    PhpStorm、Webstorm三者是一脉相承的IDE，界面和操作基本相同，Webstorm速度最快，Idea功能最强大。明河主要讲解Webstorm，可以套用到PhpStorm和Idea上。</p>
+
+                                <p>Webstorm目前无中文版，很多同学刚上手时摸不着头脑，这也是明河写这个系列教程的原因，如果你愿意看完这个系列教程，就会体验到Webstorm的省心和强大。</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="install">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Webstorm的安装</h2>
+
+                        <p><a href="http://download-ln.jetbrains.com/webide/WebStorm-5.0.2.exe" title="WebStrom下载"
+                              class="btn-download">WebStrom下载</a></p>
+
+                        <p><strong>明河的<a href="http://pan.baidu.com/share/link?shareid=76340&amp;uk=1745132857"
+                                         target="_blank">配置、字体、配色、插件资源</a>（还会更新）</strong></p>
+
+                        <p>先下载Webstorm，然后从明河的分享链接中找到注册机下载到本地。</p>
+
+                        <p>安装过程很简单，一直下一步即可，运行Webstorm后，会出现需要注册的页面，打开注册机程序：</p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-01" rel="attachment wp-att-5681"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-01.png" alt=""
+                                title="webStorm-01" width="378" height="333" class="alignnone size-full wp-image-5681"></a>
+                        </p>
+
+                        <p>将注册机的信息复制进去即可。</p>
+
+                        <p>
+                            Webstorm的默认字体和配色相当糟糕（这点不如sublime_text），你可以直接手动改进Webstorm的配置（颇有成就感哦O(∩_∩)O），当然也可以直接导入明河的配置（从分享链接中找到明河的配置包，下载到本地），如下图：</p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-02" rel="attachment wp-att-5683"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-02.png" alt=""
+                                title="webStorm-02" width="239" height="444" class="alignnone size-full wp-image-5683"></a>
+                        </p>
+
+                        <p>（当然，你也可以点击“Export settings”导出你自己的配置。）</p>
+
+                        <h3>手动配置Webstorm</h3>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-04" rel="attachment wp-att-5685"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-04.png" alt=""
+                                title="webStorm-04" width="240" height="321" class="alignnone size-full wp-image-5685"></a>
+                        </p>
+
+                        <p>配置项极其丰富，建议善用搜索，比如配置字体大小：</p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-05" rel="attachment wp-att-5686"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-05.png" alt=""
+                                title="webStorm-05" width="373" height="210" class="alignnone size-full wp-image-5686"></a>
+                        </p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-06" rel="attachment wp-att-5687"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-06.png" alt=""
+                                title="webStorm-06" width="557" height="82"
+                                class="alignnone size-full wp-image-5687"></a></p>
+
+                        <h3>git配置</h3>
+
+                        <p>导入后可能会出现一个“git配置失败”的提示，如果你没有用git可以无视，有用git，可以点击“<strong>fix it</strong>”：</p>
+
+                        <p>找到你本机的git目录：</p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-03" rel="attachment wp-att-5684"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-03.png" alt=""
+                                title="webStorm-03" width="363" height="148" class="alignnone size-full wp-image-5684"></a>
+                        </p>
+
+                        <p>有使用github，还需要配置下github的账号和密码：</p>
+
+                        <p>进入Webstorm的配置界面，搜索github</p>
+
+                        <p><a href="http://www.36ria.com/5677/webstorm-07" rel="attachment wp-att-5688"><img
+                                src="http://www.36ria.com/wp-content/uploads/2012/10/webStorm-07.png" alt=""
+                                title="webStorm-07" width="340" height="300" class="alignnone size-full wp-image-5688"></a>
+                        </p>
+
+                        <h3>推荐使用字体</h3>
+
+                        <p>
+                            推荐使用DroidFamily或SourceCodePro_FontsOnly字体，这二款字体都很美观，代码看上去很舒服，在明河的分享链接上有个“字体”文件夹里面有，自行下载安装，安装完后重启Webstorm，进入“settings”，找到font配置。</p>
+
+                        <p>下一篇将讲解Webstorm的初步使用和主要界面模块。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item3">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>与服务器端的交互</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item4">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>上传验证控制</h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>渲染默认队列数据</h2>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <nav>
+            <span id="bb-nav-prev">&larr;</span>
+            <span id="bb-nav-next">&rarr;</span>
+        </nav>
+
+        <span id="tblcontents" class="menu-button">Table of Contents</span>
+
     </div>
-</div>
-<div class="bb-item" id="item3">
-    <div class="content">
-        <div class="scroller">
-            <h2>与服务器端的交互</h2>
-        </div>
-    </div>
-</div>
-<div class="bb-item" id="item4">
-    <div class="content">
-        <div class="scroller">
-            <h2>上传验证控制</h2>
-
-        </div>
-    </div>
-</div>
-<div class="bb-item" id="item5">
-    <div class="content">
-        <div class="scroller">
-            <h2>渲染默认队列数据</h2>
-
-        </div>
-    </div>
-</div>
-</div>
-
-<nav>
-    <span id="bb-nav-prev">&larr;</span>
-    <span id="bb-nav-next">&rarr;</span>
-</nav>
-
-<span id="tblcontents" class="menu-button">Table of Contents</span>
 
 </div>
-
-</div><!-- /container -->
+<!-- /container -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="assets/jquery.plugins.min.js"></script>
+<script src="assets/jquery.plugins.js"></script>
 <script src="./assets/page.js"></script>
 <script>
-    $(function() {
+    $(function () {
 
         Page.init();
 

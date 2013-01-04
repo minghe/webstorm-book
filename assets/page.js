@@ -1,176 +1,202 @@
 var Page = (function() {
 
-	var $container = $( '#container' ),
-		$bookBlock = $( '#bb-bookblock' ),
-		$items = $bookBlock.children(),
-		itemsCount = $items.length,
-		current = 0,
-		bb = $( '#bb-bookblock' ).bookblock( {
-			speed : 800,
-			perspective : 2000,
-			shadowSides	: 0.8,
-			shadowFlip	: 0.4,
-			onEndFlip : function(old, page, isLimit) {
-				
-				current = page;
-				// update TOC current
-				updateTOC();
-				// updateNavigation
-				updateNavigation( isLimit );
-				// initialize jScrollPane on the content div for the new item
-				setJSP( 'init' );
-				// destroy jScrollPane on the content div for the old item
-				setJSP( 'destroy', old );
+    var $container = $( '#container' ),
+        $bookBlock = $( '#bb-bookblock' ),
+        $items = $bookBlock.children(),
+        itemsCount = $items.length,
+        current = 0,
+        bb = $( '#bb-bookblock' ).bookblock( {
+            speed : 800,
+            perspective : 2000,
+            shadowSides	: 0.8,
+            shadowFlip	: 0.4,
+            onEndFlip : function(old, page, isLimit) {
 
-			}
-		} ),
-		$navNext = $( '#bb-nav-next' ),
-		$navPrev = $( '#bb-nav-prev' ).hide(),
-		$menuItems = $container.find( 'ul.menu-toc > li' ),
-		$tblcontents = $( '#tblcontents' ),
-		transEndEventNames = {
-			'WebkitTransition': 'webkitTransitionEnd',
-			'MozTransition': 'transitionend',
-			'OTransition': 'oTransitionEnd',
-			'msTransition': 'MSTransitionEnd',
-			'transition': 'transitionend'
-		},
-		transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
-		supportTransitions = Modernizr.csstransitions;
+                current = page;
+                // update TOC current
+                updateTOC();
+                // updateNavigation
+                updateNavigation( isLimit );
+                // initialize jScrollPane on the content div for the new item
+                setJSP( 'init' );
+                // destroy jScrollPane on the content div for the old item
+                setJSP( 'destroy', old );
+                setHash();
 
-	function init() {
+            }
+        } ),
+        $navNext = $( '#bb-nav-next' ),
+        $navPrev = $( '#bb-nav-prev' ).hide(),
+        $menuItems = $container.find( 'ul.J_Menu > li' ),
+        $tblcontents = $( '#tblcontents' ),
+        transEndEventNames = {
+            'WebkitTransition': 'webkitTransitionEnd',
+            'MozTransition': 'transitionend',
+            'OTransition': 'oTransitionEnd',
+            'msTransition': 'MSTransitionEnd',
+            'transition': 'transitionend'
+        },
+        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+        supportTransitions = Modernizr.csstransitions;
 
-		// initialize jScrollPane on the content div of the first item
-		setJSP( 'init' );
-		initEvents();
+    function init() {
 
-	}
-	
-	function initEvents() {
+        // initialize jScrollPane on the content div of the first item
+        setJSP( 'init' );
+        initEvents();
 
-		// add navigation events
-		$navNext.on( 'click', function() {
-			bb.next();
-			return false;
-		} );
+        var hash = window.location.hash;
+        jump(hash);
+    }
 
-		$navPrev.on( 'click', function() {
-			bb.prev();
-			return false;
-		} );
-		
-		// add swipe events
-		$items.on( {
-			'swipeleft'		: function( event ) {
-				if( $container.data( 'opened' ) ) {
-					return false;
-				}
-				bb.next();
-				return false;
-			},
-			'swiperight'	: function( event ) {
-				if( $container.data( 'opened' ) ) {
-					return false;
-				}
-				bb.prev();
-				return false;
-			}
-		} );
+    function initEvents() {
 
-		// show table of contents
-		$tblcontents.on( 'click', toggleTOC );
+        // add navigation events
+        $navNext.on( 'click', function() {
+            bb.next();
+            return false;
+        } );
 
-		// click a menu item
-		$menuItems.on( 'click', function() {
+        $navPrev.on( 'click', function() {
+            bb.prev();
+            return false;
+        } );
 
-			var $el = $( this ),
-				idx = $el.index(),
-				jump = function() {
-					bb.jump( idx + 1 );
-				};
-			
-			current !== idx ? closeTOC( jump ) : closeTOC();
+        // add swipe events
+        $items.on( {
+            'swipeleft'		: function( event ) {
+                if( $container.data( 'opened' ) ) {
+                    return false;
+                }
+                bb.next();
+                return false;
+            },
+            'swiperight'	: function( event ) {
+                if( $container.data( 'opened' ) ) {
+                    return false;
+                }
+                bb.prev();
+                return false;
+            }
+        } );
 
-			return false;
-			
-		} );
+        // show table of contents
+        $tblcontents.on( 'click', toggleTOC );
 
-		// reinit jScrollPane on window resize
-		$( window ).on( 'debouncedresize', function() {
-			// reinitialise jScrollPane on the content div
-			setJSP( 'reinit' );
-		} );
+        // click a menu item
+        $menuItems.on( 'click', function() {
 
-	}
+            var $el = $( this ),
+                idx = $el.index();
 
-	function setJSP( action, idx ) {
-		
-		var idx = idx === undefined ? current : idx,
-			$content = $items.eq( idx ).children( 'div.content' ),
-			apiJSP = $content.data( 'jsp' );
-		
-		if( action === 'init' && apiJSP === undefined ) {
-			$content.jScrollPane({verticalGutter : 0, hideFocus : true });
-		}
-		else if( action === 'reinit' && apiJSP !== undefined ) {
-			apiJSP.reinitialise();
-		}
-		else if( action === 'destroy' && apiJSP !== undefined ) {
-			apiJSP.destroy();
-		}
+            jump(idx);
 
-	}
+            return false;
 
-	function updateTOC() {
-		$menuItems.removeClass( 'menu-toc-current' ).eq( current ).addClass( 'menu-toc-current' );
-	}
+        } );
 
-	function updateNavigation( isLastPage ) {
-		
-		if( current === 0 ) {
-			$navNext.show();
-			$navPrev.hide();
-		}
-		else if( isLastPage ) {
-			$navNext.hide();
-			$navPrev.show();
-		}
-		else {
-			$navNext.show();
-			$navPrev.show();
-		}
+        // reinit jScrollPane on window resize
+        $( window ).on( 'debouncedresize', function() {
+            // reinitialise jScrollPane on the content div
+            setJSP( 'reinit' );
+        } );
 
-	}
+    }
 
-	function toggleTOC() {
-		var opened = $container.data( 'opened' );
-		opened ? closeTOC() : openTOC();
-	}
+    function jump(index){
+        //如果传入的是锚点
+        if($.type(index) == 'string' && $menuItems.length > 0){
+            if(index == '') return false;
+            $menuItems.each(function(i,li){
+                var href = $(li).children('a').attr('href');
+                if(href == index){
+                    index = i;
+                }
+            })
+        }
+        var jump = function() {
+            bb.jump( index + 1 );
+        };
+        current !== index ? closeTOC( jump ) : closeTOC();
+    }
 
-	function openTOC() {
-		$navNext.hide();
-		$navPrev.hide();
-		$container.addClass( 'slideRight' ).data( 'opened', true );
-	}
+    function setHash(){
+        $menuItems.each(function(i,li){
+            var href = $(li).children('a').attr('href');
+            if(i == current){
+                  window.location.hash = href;
+            }
+        })
+    }
 
-	function closeTOC( callback ) {
+    function setJSP( action, idx ) {
 
-		updateNavigation( current === itemsCount - 1 );
-		$container.removeClass( 'slideRight' ).data( 'opened', false );
-		if( callback ) {
-			if( supportTransitions ) {
-				$container.on( transEndEventName, function() {
-					$( this ).off( transEndEventName );
-					callback.call();
-				} );
-			}
-			else {
-				callback.call();
-			}
-		}
+        var idx = idx === undefined ? current : idx,
+            $content = $items.eq( idx ).children( 'div.content' ),
+            apiJSP = $content.data( 'jsp' );
 
-	}
+        if( action === 'init' && apiJSP === undefined ) {
+            $content.jScrollPane({verticalGutter : 0, hideFocus : true });
+        }
+        else if( action === 'reinit' && apiJSP !== undefined ) {
+            apiJSP.reinitialise();
+        }
+        else if( action === 'destroy' && apiJSP !== undefined ) {
+            apiJSP.destroy();
+        }
 
-	return { init : init };
+    }
+
+    function updateTOC() {
+        $menuItems.removeClass( 'menu-toc-current' ).eq( current ).addClass( 'menu-toc-current' );
+    }
+
+    function updateNavigation( isLastPage ) {
+
+        if( current === 0 ) {
+            $navNext.show();
+            $navPrev.hide();
+        }
+        else if( isLastPage ) {
+            $navNext.hide();
+            $navPrev.show();
+        }
+        else {
+            $navNext.show();
+            $navPrev.show();
+        }
+
+    }
+
+    function toggleTOC() {
+        var opened = $container.data( 'opened' );
+        opened ? closeTOC() : openTOC();
+    }
+
+    function openTOC() {
+        $navNext.hide();
+        $navPrev.hide();
+        $container.addClass( 'slideRight' ).data( 'opened', true );
+    }
+
+    function closeTOC( callback ) {
+
+        updateNavigation( current === itemsCount - 1 );
+        $container.removeClass( 'slideRight' ).data( 'opened', false );
+        if( callback ) {
+            if( supportTransitions ) {
+                $container.on( transEndEventName, function() {
+                    $( this ).off( transEndEventName );
+                    callback.call();
+                } );
+            }
+            else {
+                callback.call();
+            }
+        }
+
+    }
+
+    return { init : init };
 
 })();

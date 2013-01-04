@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jasmine" type="javaScript">
+    <CLASSES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../jasmine-kissy/lib/jasmine/jasmine.js" />
+      <root url="file://$PROJECT_DIR$/../../jasmine-kissy/src/jasmine-kissy.js" />
+    </SOURCES>
+  </library>
+</component>
