@@ -18,15 +18,15 @@
         <ul id="menu-toc" class="menu-toc J_Menu">
             <li class="menu-toc-current"><a href="#index">Webstorm简介</a></li>
             <li><a href="#install">安装和配置</a></li>
-            <li><a href="">工程和界面</a></li>
-            <li><a href="">插件/配色的使用</a></li>
-            <li><a href="">常用快捷键</a></li>
-            <li><a href="">git集成</a></li>
-            <li><a href="">利用jsdoc提高自动提示</a></li>
-            <li><a href="">template</a></li>
-            <li><a href="">JsTestDriver的使用</a></li>
-            <li><a href="">语言支持</a></li>
-            <li><a href="">cookbook</a></li>
+            <li><a href="#ui">工程和界面</a></li>
+            <li><a href="#plugins">插件/配色的使用</a></li>
+            <li><a href="#keyboard">常用快捷键</a></li>
+            <li><a href="#git">git集成</a></li>
+            <li><a href="#jsdoc">利用jsdoc提高自动提示</a></li>
+            <li><a href="#template">template</a></li>
+            <li><a href="#JsTestDriver">JsTestDriver的使用</a></li>
+            <li><a href="#nodejs">语言支持</a></li>
+            <li><a href="#qa">Q&A</a></li>
 
         </ul>
     </div>
@@ -142,29 +142,777 @@
                     </div>
                 </div>
             </div>
-            <div class="bb-item" id="item3">
+            <div class="bb-item" id="ui">
                 <div class="content  J_Content">
                     <div class="scroller">
-                        <h2>与服务器端的交互</h2>
+                            <h2>Webstorm中的工程</h2>
+                            <h3>1.新建工程</h3>
+                            <p>“Quick Start”界面新建工程：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-1" rel="attachment wp-att-5719"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-1.png" alt="" title="webstorm-1" width="332" height="408" class="alignnone size-full wp-image-5719"></a></p>
+                            <p>也可以点击顶部菜单栏“File”-&gt; “New Project”。</p>
+                            <p>弹出如下界面：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-3" rel="attachment wp-att-5721"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-3.png" alt="" title="webstorm-3" width="574" height="171" class="alignnone size-full wp-image-5721"></a></p>
+                            <p>“Location”指向想要创建的工程目录（如果该目录已经存在文件，会出现exist提示，没关系，直接下一步即可）。</p>
+                            <p>“Project Type”为工程类型，应该理解为工程模版更合适，默认为空项目，Webstorm支持html5、bootstrap、NodeJs、express工程模版。</p>
+                            <p>这里我们选择流行的“Bootstrap”，点击下一步后，Webstorm会自动从服务器拉取Bootstrap的代码（源代码）到工程目录内。</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-4" rel="attachment wp-att-5722"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-4.png" alt="" title="webstorm-4" width="248" height="291" class="alignnone size-full wp-image-5722"></a></p>
+                            <p>Webstorm的工程缺陷在于<strong>没办法在一个界面中存在多个工程</strong>，再新建个工程，会打开个新的窗口，来回切换非常麻烦。</p>
+                            <h3>2.收藏夹功能</h3>
+                            <p>当工程目录很庞大时，有些子目录很经常打开，但层级又很深，这时候可以把目录添加到收藏夹里面，比如：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-7" rel="attachment wp-att-5724"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-7.png" alt="" title="webstorm-7" width="589" height="293" class="alignnone size-full wp-image-5724"></a></p>
+                            <p>（需命名下收藏列表名称）</p>
+                            <p>添加成功后，左侧有个“Favorites”菜单：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-8" rel="attachment wp-att-5725"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-8.png" alt="" title="webstorm-8" width="252" height="234" class="alignnone size-full wp-image-5725"></a></p>
+                            <h3>3.工程其他操作</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-9" rel="attachment wp-att-5726"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-9.png" alt="" title="webstorm-9" width="267" height="240" class="alignnone size-full wp-image-5726"></a></p>
+                            <p>包括关闭工程、打开最近工程、重命名工程、打开工程等，比较简单，明河不再累述。</p>
+                            <h2>Webstorm的主要界面</h2>
+                            <h3>1.顶部菜单</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-10" rel="attachment wp-att-5729"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-10.png" alt="" title="webstorm-10" width="509" height="49" class="alignnone size-full wp-image-5729"></a></p>
+                            <p>包含所有IDE功能，后面的文章会讲解到常用的功能项。</p>
+                            <p>建议看下功能菜单上的快捷键。</p>
+                            <h3>2.目录面包屑</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-11" rel="attachment wp-att-5730"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-11.png" alt="" title="webstorm-11" width="322" height="149" class="alignnone size-full wp-image-5730"></a></p>
+                            <p>这个功能非常实用，可以通过点击目录来寻找需要的文件，比打开工程界面来得节约空间，够低碳。</p>
+                            <h3>3.工程界面</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-4" rel="attachment wp-att-5722"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-4.png" alt="" title="webstorm-4" width="248" height="291" class="alignnone size-full wp-image-5722"></a></p>
+                            <p>在Webstorm中用于查找文件的功能有很多，在工程界面界面中查找是最原始的，效率也是最差的，打开后还占用代码窗口面积。</p>
+                            <p>建议使用“alt+1”来快速拆合工程界面。</p>
+                            <h3>4.构造器界面</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-12" rel="attachment wp-att-5731"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-12.png" alt="" title="webstorm-12" width="242" height="328" class="alignnone size-full wp-image-5731"></a></p>
+                            <p>在这个界面中，可以快速查找js类的函数和对象，留意准确度跟你的注释量息息相关（注释需要符合jsdoc格式，这个后面会讲道）。</p>
+                            <h3>5.todo界面</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-13" rel="attachment wp-att-5732"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-13.png" alt="" title="webstorm-13" width="358" height="132" class="alignnone size-full wp-image-5732"></a></p>
+                            <p>给代码加todo注释，是个非常好的习惯，比如提醒后面的维护者要注意些什么，比如提醒日后的自己要优化这处的代码等。</p>
+                            <p>菜单项前面的6,，表示你可以使用”alt+6″来快速拆合此界面。</p>
+                            <p>给代码加todo很简单：<code>// TODO why??</code>类似这样既可。</p>
+                            <h3>6.底部信息</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-14" rel="attachment wp-att-5733"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-14.png" alt="" title="webstorm-14" width="437" height="23" class="alignnone size-full wp-image-5733"></a></p>
+                            <p>数字区域表示的是光标位置，有个实用的技巧：点击这个区域，可以跳转到指定行的代码：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-15" rel="attachment wp-att-5734"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-15.png" alt="" title="webstorm-15" width="327" height="125" class="alignnone size-full wp-image-5734"></a></p>
+                            <p>底部还可以设置文件的编码。</p>
+                            <h3>7.显示代码行数</h3>
+                            <p>右击代码界面左侧边框任意位置：</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-16" rel="attachment wp-att-5735"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-16.png" alt="" title="webstorm-16" width="200" height="195" class="alignnone size-full wp-image-5735"></a></p>
+                            <p>左侧边框还会有代码版本变更标记，非常实用。</p>
+                            <h3>8.工程环境配置</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-17" rel="attachment wp-att-5736"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-17.png" alt="" title="webstorm-17" width="192" height="115" class="alignnone size-full wp-image-5736"></a></p>
+                            <p>日后明河会讲解这部分内容。</p>
+                            <h3>9.隐藏边栏菜单</h3>
+                            <p><a href="http://www.36ria.com/5698/webstorm-18" rel="attachment wp-att-5737"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-18.png" alt="" title="webstorm-18" width="327" height="70" class="alignnone size-full wp-image-5737"></a></p>
+                            <p>点击左底下的关闭按钮。</p>
+                            <h3>10.快速拆合界面</h3>
+                            <p>可以使用“alt+数字键”来快速拆合界面。</p>
+                            <p>如何查看界面的数字键呢？</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-19" rel="attachment wp-att-5738"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-19.png" alt="" title="webstorm-19" width="509" height="156" class="alignnone size-full wp-image-5738"></a></p>
+                            <h3>11.隐藏菜单和工具栏</h3>
+                            <p>点击“View”</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-20" rel="attachment wp-att-5739"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-20.png" alt="" title="webstorm-20" width="305" height="108" class="alignnone size-full wp-image-5739"></a></p>
+                            <h3>12.双栏代码界面</h3>
+                            <p>右击代码选项卡上的文件</p>
+                            <p><a href="http://www.36ria.com/5698/webstorm-21" rel="attachment wp-att-5740"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-21.png" alt="" title="webstorm-21" width="318" height="194" class="alignnone size-full wp-image-5740"></a></p>
                     </div>
                 </div>
             </div>
-            <div class="bb-item" id="item4">
+            <div class="bb-item" id="plugins">
                 <div class="content  J_Content">
                     <div class="scroller">
-                        <h2>上传验证控制</h2>
+                            <h2>Webstorm的插件</h2>
+                            <p>Webstorm的插件丰富程度无法跟eclipse、sublime text、vim相比，但Webstorm本身就足够强大，并不大需要安装太多插件。</p>
+                            <p>Webstorm的插件库中有些还是很有意思，用户可以多挖掘下。</p>
+                            <p>（PS:idea的插件并不一定通用于webstorm）</p>
+                            <h3>通过IDE直接安装插件</h3>
+                            <p>进入“settings”，搜索“plugins”，进入插件页面</p>
+                            <p><a href="http://www.36ria.com/5708/plugin" rel="attachment wp-att-5770"><img src="http://www.36ria.com/wp-content/uploads/2012/10/plugin.png" alt="" title="plugin" width="441" height="202" class="alignnone size-full wp-image-5770"></a></p>
+                            <p><a href="http://www.36ria.com/5708/webstorm-plugins-1" rel="attachment wp-att-5771"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-plugins-1.png" alt="" title="webstorm-plugins-1" width="446" height="111" class="alignnone size-full wp-image-5771"></a></p>
+                            <p>试试安装个“css-X-fire”插件（用于当使用firebug修改css属性时，编辑器内的css代码也会发生变化。）</p>
+                            <p><a href="http://www.36ria.com/5708/webstorm-plugins-2" rel="attachment wp-att-5772"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-plugins-2.png" alt="" title="webstorm-plugins-2" width="397" height="52" class="alignnone size-full wp-image-5772"></a></p>
+                            <p>右击选择下载：</p>
+                            <p><a href="http://www.36ria.com/5708/webstorm-plugins-3" rel="attachment wp-att-5773"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-plugins-3.png" alt="" title="webstorm-plugins-3" width="213" height="69" class="alignnone size-full wp-image-5773"></a></p>
+                            <p>安装成功后自动重启下IDE即可。</p>
+                            <h3>从网页插件库下载插件</h3>
+                            <p>以前使用IDE下载插件，经常出现下载不动的情况。</p>
+                            <p>你还可以进入<a href="http://plugins.intellij.net/?webide" target="_blank">插件库页面</a>，将插件下载到本地后。</p>
+                            <p><a href="http://www.36ria.com/5708/plugins-5" rel="attachment wp-att-5778"><img src="http://www.36ria.com/wp-content/uploads/2012/10/plugins-5.png" alt="" title="plugins-5" width="696" height="142" class="alignnone size-full wp-image-5778"></a></p>
+                            <h3>常用插件推荐</h3>
+                            <p>你可以在明河的<a href="http://pan.baidu.com/share/link?shareid=76340&amp;uk=1745132857#dir/path=%2FwebStorm%2F%E6%8F%92%E4%BB%B6" target="_blank">百度云盘</a>上找到。</p>
+                            <p><strong>1.IdeaVim</strong></p>
+                            <p>下载量最高的插件，让idea支持vim的快捷键！</p>
+                            <p><strong>2.TabSwitch</strong></p>
+                            <p>快速切换代码文件选项卡</p>
+                            <p><strong>3.markdown</strong></p>
+                            <p>支持markdown语法</p>
+                            <p><strong>4.JsTestDriver</strong></p>
+                            <p>webstorm内置，推荐idea安装，用于回归js单元测试，后面会介绍用法。</p>
+                            <p><strong>5.CSS-X-Fire</strong></p>
+                            <p>前面有介绍过了，firebug的一个插件，当你修改css属性时修改编辑器内的代码。</p>
+                            <p><strong>6.<a href="http://plugins.intellij.net/plugin/?webide&amp;pluginId=4455" target="_blank">Key Promoter</a></strong></p>
+                            <p>快捷键提示插件，帮助你快速记住快捷键。当你用鼠标完成某功能时，它会指示有相应的快捷键来完成刚才的功能，同时指导你为经常重复的操作建立快捷键。</p>
+                            <p><strong>7.<a href="http://plugins.intellij.net/plugin?pr=webide&amp;pluginId=1475" target="_blank">AltN8</a></strong></p>
+                            <p>非常强大的插件，用于快速打开的文件（自行编写正则）</p>
+                            <h2>使用自定义的配色</h2>
+                            <p>你依然可以在<a href="http://pan.baidu.com/share/link?shareid=76340&amp;uk=1745132857#dir/path=%2FwebStorm%2F%E9%85%8D%E8%89%B2" target="_blank">明河的网盘</a>上找到几种不错的配色。</p>
+                            <p>以使用<strong>tarzoo</strong>配色方案为例。</p>
+                            <p>将tarzoo.xml放在<strong>C:\Users\Administrator\.WebIde50\config\colors</strong>内，点击“Files – Settings – Editor – Colors &amp; Fonts”，选择tarzoo主题：</p>
+                            <p><a href="http://www.36ria.com/5708/%e6%88%aa%e5%9b%be03" rel="attachment wp-att-5779"><img src="http://www.36ria.com/wp-content/uploads/2012/10/截图03.png" alt="" title="截图03" width="298" height="78" class="alignnone size-full wp-image-5779"></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="keyboard">
+                <div class="content  J_Content">
+                    <div class="scroller">
+                    <p>提高代码编写效率，离不开快捷键的使用，Webstorm拥有丰富的代码快速编辑功能，你可以自由配置功能快捷键。</p>
+                    <h2>快捷键配置</h2>
+                    <p>点击“File”-&gt; “settings”</p>
+                    <p><a href="http://www.36ria.com/5700/%e6%88%aa%e5%9b%be00-3" rel="attachment wp-att-5743"><img src="http://www.36ria.com/wp-content/uploads/2012/10/截图00.png" alt="" title="截图00" width="641" height="278" class="alignnone size-full wp-image-5743"></a></p>
+                    <p>Webstorm预置了其他编辑器的快捷键配置，可以点击</p>
+                    <p><a href="http://www.36ria.com/5700/keymaps" rel="attachment wp-att-5744"><img src="http://www.36ria.com/wp-content/uploads/2012/10/keymaps.png" alt="" title="keymaps" width="266" height="219" class="alignnone size-full wp-image-5744"></a></p>
+                    <h2>默认配置下的常用快捷键</h2>
+                    <h3>查找/代替</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+N</strong></td>
+                            <td valign="top">通过文件名快速查找工程内的文件（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+alt+N</strong></td>
+                            <td valign="top">通过一个字符快速查找位置（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+F</strong></td>
+                            <td valign="top">在文件内快速查找代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>F3</strong></td>
+                            <td valign="top">查找下一个</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>shift+F3</strong></td>
+                            <td valign="top">查找上一个</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+R</strong></td>
+                            <td valign="top">文件内代码替换</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+R</strong></td>
+                            <td valign="top">指定目录内代码批量替换</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+F</strong></td>
+                            <td valign="top">指定目录内代码批量查找</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+R</strong></td>
+                            <td valign="top">文件内代码替换</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>界面操作</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+A</strong></td>
+                            <td valign="top">快速查找并使用编辑器所有功能（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+[0-9]</strong></td>
+                            <td valign="top">快速拆合功能界面模块</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+F12</strong></td>
+                            <td valign="top">最大区域显示代码（会隐藏其他的功能界面模块）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+shift+F</strong></td>
+                            <td valign="top">将当前文件加入收藏夹</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+alt+s</strong></td>
+                            <td valign="top">打开配置窗口</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+tab</strong></td>
+                            <td valign="top">切换代码选项卡（还要进行此选择，效率差些）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+&lt;-或-&gt;</strong></td>
+                            <td valign="top">切换代码选项卡</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+N</strong></td>
+                            <td valign="top">通过文件名快速查找工程内的文件（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+alt+N</strong></td>
+                            <td valign="top">通过一个字符快速查找位置（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+F</strong></td>
+                            <td valign="top">在文件内快速查找代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>F3</strong></td>
+                            <td valign="top">查找下一个</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>shift+F3</strong></td>
+                            <td valign="top">查找上一个</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+R</strong></td>
+                            <td valign="top">文件内代码替换</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+R</strong></td>
+                            <td valign="top">指定目录内代码批量替换</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+F</strong></td>
+                            <td valign="top">指定目录内代码批量查找</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+R</strong></td>
+                            <td valign="top">文件内代码替换</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>界面操作</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+A</strong></td>
+                            <td valign="top">快速查找并使用编辑器所有功能（必记）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+[0-9]</strong></td>
+                            <td valign="top">快速拆合功能界面模块</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+shift+F12</strong></td>
+                            <td valign="top">最大区域显示代码（会隐藏其他的功能界面模块）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+shift+F</strong></td>
+                            <td valign="top">将当前文件加入收藏夹</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+alt+s</strong></td>
+                            <td valign="top">打开配置窗口</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+tab</strong></td>
+                            <td valign="top">切换代码选项卡（还要进行此选择，效率差些）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+&lt;-或-&gt;</strong></td>
+                            <td valign="top">切换代码选项卡</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+F4</strong></td>
+                            <td valign="top">关闭当前代码选项卡</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>代码编辑</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+D</strong></td>
+                            <td valign="top">复制当前行</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+W</strong></td>
+                            <td valign="top">选中单词</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+&lt;-或-&gt;</strong></td>
+                            <td valign="top">以单词作为边界跳光标位置</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+Insert</strong></td>
+                            <td valign="top">新建一个文件或其他</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+alt+L</strong></td>
+                            <td valign="top">格式化代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>shift+tab/tab</strong></td>
+                            <td valign="top">减少/扩大缩进（可以在代码中减少行缩进）</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+Y</strong></td>
+                            <td valign="top">删除一行</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>shift+enter</strong></td>
+                            <td valign="top">重新开始一行（无论光标在哪个位置）</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>导航</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>esc</strong></td>
+                            <td valign="top">进入代码编辑区域</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+F1</strong></td>
+                            <td valign="top">查找代码在其他界面模块的位置，颇为有用</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+G</strong></td>
+                            <td valign="top">到指定行的代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+]/[</strong></td>
+                            <td valign="top">光标到代码块的前面或后面</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+up/down</strong></td>
+                            <td valign="top">上一个/下一个方法</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>建议配置版本控制快捷键</h3>
+                    <table border="0" cellspacing="0" cellpadding="0" class="tab1">
+                        <colgroup>
+                            <col width="160">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <td valign="top">
+                                <p><strong>快捷键</strong></p>
+                            </td>
+                            <td valign="top">
+                                <p><strong>说明</strong></p>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top"><strong>ctrl+C</strong></td>
+                            <td valign="top">提交代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+p</strong></td>
+                            <td valign="top">向远程版本库推送更新</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+G</strong></td>
+                            <td valign="top">到指定行的代码</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>ctrl+]/[</strong></td>
+                            <td valign="top">光标到代码块的前面或后面</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><strong>alt+up/down</strong></td>
+                            <td valign="top">上一个/下一个方法</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                     </div>
                 </div>
             </div>
-            <div class="bb-item" id="item5">
+
+            <div class="bb-item" id="git">
                 <div class="content  J_Content">
                     <div class="scroller">
-                        <h2>渲染默认队列数据</h2>
-
+                            <p>Webstorm内置多种版本控制工具支持，明河以最常见的svn和git为例，讲解下在Webstorm中的版本控制工具的使用。</p>
+                            <p>在Webstorm中使用svn很简单，不需要额外配置，git需要一些配置。相关内容请看<a href="http://www.36ria.com/5677" target="_blank">《安装和配置—Webstorm入门指南》</a></p>
+                            <h2>git的使用</h2>
+                            <p>Webstorm中只集成了git的常用操作，并不能完全替代命令行工具。</p>
+                            <p>当Webstorm初始化工程时会自动查找项目的版本库。</p>
+                            <h3>哪里查看当前所处的git分支？</h3>
+                            <p>留意界面右下角：</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git" rel="attachment wp-att-5754"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git.png" alt="" title="webstorm-git" width="510" height="37" class="alignnone size-full wp-image-5754"></a></p>
+                            <p>上图表明工程工作目录处于”kf1.3″分支下。</p>
+                            <h3>如何新建/查看/切换分支?</h3>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-2" rel="attachment wp-att-5755"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-2.png" alt="" title="webstorm-git-2" width="269" height="388" class="alignnone size-full wp-image-5755"></a></p>
+                            <p>从图中可以看到本地分支/远程分支的情况，点击即可切换。</p>
+                            <p>可以点击“new branch”来创建个新的分支（本地分支）。</p>
+                            <p>当然你可以从指定的“tag”和指定的版本中拉取代码。</p>
+                            <h3>如何查看工作目录代码与版本库代码的差异？</h3>
+                            <p>代码编写界面左侧，可以看到当前工作目录代码与最近版本库代码的差异。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-3" rel="attachment wp-att-5756"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-3.png" alt="" title="webstorm-git-3" width="274" height="289" class="alignnone size-full wp-image-5756"></a></p>
+                            <p><strong>如何跟指定版本比较呢？</strong></p>
+                            <p>右击代码界面任意区域，选择“git”</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-4" rel="attachment wp-att-5757"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-4.png" alt="" title="webstorm-git-4" width="603" height="231" class="alignnone size-full wp-image-5757"></a></p>
+                            <p>选择要进行比较的版本：</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-5" rel="attachment wp-att-5758"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-5.png" alt="" title="webstorm-git-5" width="316" height="258" class="alignnone size-full wp-image-5758"></a></p>
+                            <p>最后悔弹出二栏比较的窗口。</p>
+                            <p>当然你也可以选择与分支的代码进行比较。</p>
+                            <h3>如何回滚代码？</h3>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-6" rel="attachment wp-att-5759"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-6.png" alt="" title="webstorm-git-6" width="609" height="142" class="alignnone size-full wp-image-5759"></a></p>
+                            <p>慎用，webstorm强大之处在于，自带代码本地编辑历史，如果你不慎把代码弄丢了，也可以找回来，后面会介绍。</p>
+                            <h3>如何提交代码到版本库？</h3>
+                            <p>在webstorm提交代码，相当于add+commit操作哦。</p>
+                            <p>提交代码太常用了，一般明河设置快捷键“ctrl+c”。</p>
+                            <p>菜单提交方法如下：</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-7" rel="attachment wp-att-5760"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-7.png" alt="" title="webstorm-git-7" width="456" height="276" class="alignnone size-full wp-image-5760"></a></p>
+                            <p>勾选你要提交的改动，写上commit记录即可。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-8" rel="attachment wp-att-5761"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-8.png" alt="" title="webstorm-git-8" width="422" height="335" class="alignnone size-full wp-image-5761"></a></p>
+                            <h3>如何将新建的文件添加到版本库？</h3>
+                            <p>webstorm默认不会将新增文件添加到版本库中。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-9" rel="attachment wp-att-5762"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-9.png" alt="" title="webstorm-git-9" width="490" height="267" class="alignnone size-full wp-image-5762"></a></p>
+                            <h3>如何提交改动到远程版本库？</h3>
+                            <p>请确保github等远程版本库账号设置正确，机子上ssh key正确。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-10" rel="attachment wp-att-5763"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-10.png" alt="" title="webstorm-git-10" width="291" height="252" class="alignnone size-full wp-image-5763"></a></p>
+                            <p>默认是master（本地） -&gt; origin/master（远程）</p>
+                            <p>有时我们希望提交到远程分支，比如从 kf1.3（本地） -&gt; origin/1.3（远程）</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-11" rel="attachment wp-att-5764"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-11.png" alt="" title="webstorm-git-11" width="641" height="49" class="alignnone size-full wp-image-5764"></a></p>
+                            <p>多选框勾上，选择远程版本库，填写上分支名，点击刷新按钮即可。（如果远程版本库不存在这个分支，会创建一个）。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-12" rel="attachment wp-att-5765"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-12.png" alt="" title="webstorm-git-12" width="338" height="123" class="alignnone size-full wp-image-5765"></a></p>
+                            <p>从远程版本库拉取代码比较简单，明河不再演示。</p>
+                            <h2>本地历史功能</h2>
+                            <p>非常实用的功能，是找回代码的好办法。</p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-13" rel="attachment wp-att-5766"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-13.png" alt="" title="webstorm-git-13" width="471" height="97" class="alignnone size-full wp-image-5766"></a></p>
+                            <p><a href="http://www.36ria.com/5702/webstorm-git-14" rel="attachment wp-att-5767"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-git-14.png" alt="" title="webstorm-git-14" width="484" height="239" class="alignnone size-full wp-image-5767"></a></p>
                     </div>
                 </div>
             </div>
+        
+           <div class="bb-item" id="jsdoc">
+               <div class="content  J_Content">
+                   <div class="scroller">
+                       <h2>利用jsdoc提高自动提示</h2>
+                           <p>很多人第一眼喜欢上idea或Webstorm，是其拥有非常强大的自动提示功能（js中的自动提示准确率和范围远远高过其他编辑器）。</p>
+                           <p>但javascript太灵活了，又是弱类型语言，提示的准确度和详细度依然是个问题（比如，一个带参数的函数，Webstorm无法提示出参数的数据类型）。</p>
+                           <p>Webstorm5.0引入<strong>JSdoc的标签</strong>支持，通过开发者自己给代码加上符合jsdoc要求的注释，来达到强化js自动提示的目标。</p>
+                           <p>关于jsdoc，有不清楚的请看明河以前写的文章<a href="http://www.36ria.com/5101" target="_blank">《使用jsdoc生成组件API文档—jsdoc实战》</a>，如果你想知道如何编译出API文档，请看明河写的ant教程<a href="http://www.36ria.com/4816" target="_blank">《ant结合jsdoc构建js文档—ant入门指南》</a>。</p>
+                           <p>随便写个类，没加任何jsdoc注释时</p>
+<pre class="brush: js; ">function User(name){
+      this.name=  name;
+}
+User.prototype = {
+  render:function(){
+
+  },
+  getMoney:function(money){
+    return money;
+  }
+};
+</pre>
+                           <p>外部调用之：</p>
+<pre class="brush: js; ">var minghe = new User('明河');
+minghe.getMoney(1000);
+</pre>
+                           <p>在写这二行中，Webstorm给出User类和getMoney的提示，但如果getMoney的参数数据类型只能是数值型，Webstorm没给出对应的提示。</p>
+                           <p>接下来我们给getMoney这个函数加上jsdoc。</p>
+                           <p>（PS：Webstorm非常的知心，当你写好函数时候，输入“/**”加回车，会自动生成jsdoc格式的注释）</p>
+<pre class="brush: js; ">    /**
+     *
+     * @param money
+     * @return {*}
+     */
+  getMoney:function(money){
+    return money;
+  }
+</pre>
+                           <p>我们补充些限制上去：</p>
+<pre class="brush: js; ">    /**
+     *
+     * @param {Number} money 一个屌丝能有多少钱
+     * @return {Number}
+     */
+  getMoney:function(money){
+    return money;
+  }
+</pre>
+                           <p>做个测试：外部传入一个字符串作为参数</p>
+                           <p><a href="http://www.36ria.com/5793/webstorm-jsdoc-2" rel="attachment wp-att-5795"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-jsdoc-2.png" alt="" title="webstorm-jsdoc-2" width="431" height="78" class="alignnone size-full wp-image-5795"></a></p>
+                           <p>提示你传入的参数不是数值型！！</p>
+                           <p>上面明河只是举了个简单的例子，来看下其他的demo。</p>
+                           <p>先来看下一个带完成jsdoc注释的类，<a href="https://github.com/KF-kissyForm/butterfly/blob/master/gallery/form/1.3/uploader/queue.js" target="_blank">uploader中的queue</a>。</p>
+                           <p>利用jsdoc可以强化Structure的类成员的索引,有jsdoc补充后，Structure变得非常方便，我现在我用它来快速定位代码。</p>
+                           <p>使用<strong>ctrl+F12</strong>快速打开Structure界面。</p>
+                           <p><a href="http://www.36ria.com/5793/webstorm-jsdoc-3" rel="attachment wp-att-5796"><img src="http://www.36ria.com/wp-content/uploads/2012/10/webstorm-jsdoc-3.png" alt="" title="webstorm-jsdoc-3" width="434" height="390" class="alignnone size-full wp-image-5796"></a></p>
+                           <h3>@extends ：用于类继承关系的声明</h3>
+                           <p><a href="http://www.36ria.com/5793/2012-07-17_1610" rel="attachment wp-att-5798"><img src="http://www.36ria.com/wp-content/uploads/2012/10/2012-07-17_1610.png" alt="" title="2012-07-17_1610" width="540" height="304" class="alignnone size-full wp-image-5798"></a></p>
+                           <h3>@typedef：用于复杂数据类型的声明</h3>
+                           <p><img alt="" src="http://blog.jetbrains.com/webide/files/2012/07/2012-07-26_2100.png" class="alignnone" width="532" height="178"></p>
+                           <p>明河费这么多口舌，只是传递一个信息：完善的注释对于前端而言非常重要，利用<strong>jsdoc</strong>，不只可以输出API文档，还可以给我们实际编码带来便利，何乐而不为呢？</p>
+                   </div>
+               </div>
+           </div>
+        
+            <div class="bb-item" id="template">
+                <div class="content  J_Content">
+                    <div class="scroller">
+                            <p>提高编码效率，离不开代码模版，Webstorm的模版功能颇为强大和全面。</p>
+                            <h2>File Templates：文件模版</h2>
+                            <p>使用“ctrl+shift+a”，搜索File Templates：</p>
+                            <p><a href="http://www.36ria.com/5822/template-1" rel="attachment wp-att-5823"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-1.png" alt="" title="template-1" width="583" height="199" class="alignnone size-full wp-image-5823"></a></p>
+                            <p>会打开如下窗口：</p>
+                            <p><a href="http://www.36ria.com/5822/template-2" rel="attachment wp-att-5824"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-2.png" alt="" title="template-2" width="479" height="200" class="alignnone size-full wp-image-5824"></a></p>
+                            <p>接下来以新建个kissy模块文件为例：</p>
+                            <p><a href="http://www.36ria.com/5822/template-3" rel="attachment wp-att-5825"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-3.png" alt="" title="template-3" width="325" height="77" class="alignnone size-full wp-image-5825"></a></p>
+                            <p><a href="http://www.36ria.com/5822/template-4" rel="attachment wp-att-5826"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-4.png" alt="" title="template-4" width="467" height="344" class="alignnone size-full wp-image-5826"></a></p>
+                            <h3>额外给模版注入变量</h3>
+                            <p><a href="http://www.36ria.com/5822/template-5" rel="attachment wp-att-5827"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-5.png" alt="" title="template-5" width="292" height="83" class="alignnone size-full wp-image-5827"></a></p>
+                            <p>变量名可以自定义，以<strong>${变量名}$</strong>这样的格式出现。</p>
+                            <p>接下来我们来新建个文件试试。</p>
+                            <p>使用“alt+insert”，打开新建文件列表：</p>
+                            <p><a href="http://www.36ria.com/5822/template-6" rel="attachment wp-att-5828"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-6.png" alt="" title="template-6" width="214" height="227" class="alignnone size-full wp-image-5828"></a></p>
+                            <p>可以看到，已经出现了“kissy model”模版，选择之，会出现一个变量填写对话框：</p>
+                            <p><a href="http://www.36ria.com/5822/template-7-2" rel="attachment wp-att-5840"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-71.png" alt="" title="template-7" width="477" height="174" class="alignnone size-full wp-image-5840"></a></p>
+                            <p>这样就可以快速新建指定文件了，当然你也可以修改已经存在的文件模版。</p>
+                            <h2>Live Templates：优秀的代码片段模版</h2>
+                            <p>Live Templates是非常实用的功能，严重推荐大家在日常工作中用起来。</p>
+                            <p>使用“ctrl+shift+a”，搜索“live”：</p>
+                            <p><a href="http://www.36ria.com/5822/template-8" rel="attachment wp-att-5841"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-8.png" alt="" title="template-8" width="303" height="200" class="alignnone size-full wp-image-5841"></a></p>
+                            <p>会打开如下界面：</p>
+                            <p><a href="http://www.36ria.com/5822/template-9" rel="attachment wp-att-5842"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-9.png" alt="" title="template-9" width="416" height="312" class="alignnone size-full wp-image-5842"></a></p>
+                            <p>左侧会有个新建按钮，接下来我们来新建个常用的<strong>debugger;</strong>片段试试。</p>
+                            <p><a href="http://www.36ria.com/5822/template-10" rel="attachment wp-att-5843"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-10.png" alt="" title="template-10" width="527" height="205" class="alignnone size-full wp-image-5843"></a></p>
+                            <p>特别留意底部的有个live template出现的文件类型设置，是必须选择的。</p>
+                            <h3>如何插入代码片段呢？</h3>
+                            <p>在代码区域，输入“d”（不需要输入完成的模版名），然后使用“ctrl+J”：</p>
+                            <p><a href="http://www.36ria.com/5822/template-11" rel="attachment wp-att-5844"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-11.png" alt="" title="template-11" width="353" height="145" class="alignnone size-full wp-image-5844"></a></p>
+                            <p>就可以找到我们之前新建的<strong>debugger</strong>模版。</p>
+                            <h3>如何在模版中加入变量呢？</h3>
+                            <p>webstorm的live template是可以加入变量的，来体会下这个功能。</p>
+                            <p>以新建一个kissy的模块模版为例。</p>
+                            <p><a href="http://www.36ria.com/5822/template-12" rel="attachment wp-att-5845"><img src="http://www.36ria.com/wp-content/uploads/2012/11/template-12.png" alt="" title="template-12" width="475" height="278" class="alignnone size-full wp-image-5845"></a></p>
+                            <p>模版代码如下：</p>
+                            <div><div id="highlighter_685835" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">**</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;</code><code class="js plain">* @fileoverview $NOTE$</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;</code><code class="js plain">* @author 剑平（明河）&lt;minghe36@gmail.com&gt;</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;</code><code class="js plain">**/</code></div><div class="line number5 index4 alt2"><code class="js plain">KISSY.add(</code><code class="js keyword">function</code> <code class="js plain">(S, Base, Node) {</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">function</code> <code class="js plain">$CLS$(){</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$D$</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">return</code> <code class="js plain">$CLS$;</code></div><div class="line number10 index9 alt1"><code class="js plain">},{requires:[</code><code class="js string">'base'</code><code class="js plain">, </code><code class="js string">'node'</code><code class="js plain">]});</code></div><div class="line number11 index10 alt2"><code class="js plain">&lt;/minghe36@gmail.com&gt;</code></div></div></td></tr></tbody></table></div></div>
+                            <p>变量以<code>$变量名$</code>这样的形式出现。</p>
+                            <p>当你插入模版的使用，可以使用“tab”键切光标到变量位置，而且如果模版内这个变量出现多次，你只要输入一次变量值，所有地方都改变，非常的方便。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bb-item" id="JsTestDriver">
+                <div class="content  J_Content">
+                    <div class="scroller">
+                        <h2>JsTestDriver的使用</h2>
+                            <p>明河曾在年初发了<a href="http://www.36ria.com/4823" target="_blank">《使用JsTestDriver插件—idea使用技巧》</a>，讲解idea中的JsTestDriver的使用，Webstorm内置JsTestDriver，用于自动化集成测试，JsTestDriver可以快速地在本地各个浏览器上帮你回归单元测试代码，功能颇为实用（但有些蛋疼的缺点，后面明河会论述）。</p>
+                            <p>（PS：js的单元测试火过一段时间，但因为在实践过程中存在种种困难，比如代码的可测试性差，缺少最佳实践，缺少回归工具，缺少覆盖率检测、占用工时的误解等等一系列问题，导致现在js的单元测试很少出现在我们的业务中。明河日后会总结更多这方面的经验分享给大家。）</p>
+                            <h4>1.在你的根目录中插入JsTestDriver的配置文件jsTestDriver.conf</h4>
+                            <p>内容可能如下：（根据本机目录的实际情况配置）</p>
+                            <div><div id="highlighter_556337" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">server: http:</code><code class="js comments">//localhost:9876</code></div><div class="line number2 index1 alt1"><code class="js plain">load:</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmine.js</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmineAdapter.js</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmine-html.js</code></div><div class="line number6 index5 alt1"><code class="js plain">test:</code></div><div class="line number7 index6 alt2"><code class="js plain">- assets/3.0/apply/1.0/test/*.js</code></div></div></td></tr></tbody></table></div></div>
+                            <ul>
+                                <li>server：服务器路径</li>
+                                <li>load：依赖脚本，会在test指定的脚本执行前执行</li>
+                                <li>test：测试脚本</li>
+                            </ul>
+                            <p>JsTestDriver简单原理说明：将load和test的脚本移到启动的server服务器上，然后在各个浏览器中运行服务器的脚本，最后将单测得结果集返回给Webstorm。</p>
+                            <p><a href="http://www.36ria.com/5855/overview" rel="attachment wp-att-5856"><img src="http://www.36ria.com/wp-content/uploads/2012/11/Overview.png" alt="" title="Overview" width="523" height="379" class="alignnone size-full wp-image-5856"></a></p>
+                            <p>使用JsTestDriver的注意点：</p>
+                            <ul>
+                                <li>测试脚本所依赖的所有文件，必须指定；</li>
+                                <li>JsTestDriver的测试运行页面是自己创建的，没办法自己指定（这点蛋疼，会造成很多困难）；</li>
+                                <li>在ajax的测试中要特别注意，你需要mock方法，不然会出现无法获取数据，导致单测无法进行的问题；</li>
+                                <li>JsTestDriver如果使用其他单测类库比如jasmine，需要适配器</li>
+                            </ul>
+                            <h4>2.在工程内引入JsTestDriver</h4>
+                            <p>在代码界面右击，寻找到下面的菜单项：</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-1" rel="attachment wp-att-5857"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-1.png" alt="" title="JsTestDriver-1" width="313" height="251" class="alignnone size-full wp-image-5857"></a></p>
+                            <p>打开创建界面后，指定下配置文件路径：</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-2" rel="attachment wp-att-5858"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-2.png" alt="" title="JsTestDriver-2" width="525" height="190" class="alignnone size-full wp-image-5858"></a></p>
+                            <p>成功后，右上角会出现JsTestDriver的信息：</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-3" rel="attachment wp-att-5859"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-3.png" alt="" title="JsTestDriver-3" width="266" height="97" class="alignnone size-full wp-image-5859"></a></p>
+                            <h4>3.使用jasmine</h4>
+                            <p>jasmine应该是最被广泛使用的js单测类库，所以明河以jasmine的单测运行为例，而不是JsTestDriver（这里指的是JsTestDriver内置的单测类库）。</p>
+                            <p>配置load，引入jasmine和jasmineAdapter：</p>
+                            <div><div id="highlighter_868023" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">server: http:</code><code class="js comments">//localhost:9876</code></div><div class="line number2 index1 alt1"><code class="js plain">load:</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmine.js</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmineAdapter.js</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;</code><code class="js plain">- assets/3.0/tools/jasmine/jasmine-html.js</code></div></div></td></tr></tbody></table></div></div>
+                            <p>这三个文件可以在<a href="https://github.com/minghe/jasmine-kissy" target="_blank">明河的代码库</a>中找到。</p>
+                            <p>随便写个测试代码：</p>
+                            <div><div id="highlighter_300014" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">server: http:</code><code class="js comments">//localhost:9876</code></div><div class="line number2 index1 alt1"><code class="js plain">test:</code></div><div class="line number3 index2 alt2"><code class="js plain">- assets/3.0/apply/1.0/test/*.js</code></div></div></td></tr></tbody></table></div></div>
+                            <div><div id="highlighter_971922" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">describe(</code><code class="js string">'this is a demo'</code><code class="js plain">,</code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">it(</code><code class="js string">'demo it'</code><code class="js plain">,</code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">expect(</code><code class="js keyword">false</code><code class="js plain">).toBeTruthy();</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">})</code></div><div class="line number5 index4 alt2"><code class="js plain">});</code></div></div></td></tr></tbody></table></div></div>
+                            <h4>4.运行JsTestDriver</h4>
+                            <p>使用快捷键“shift+F10”</p>
+                            <p>有可能会因为缺少服务器路径配置，导致运行失败，没关系，在右下角打开JsTestDriver的界面，填写上url（http://localhost:9876）</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-4" rel="attachment wp-att-5860"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-4.png" alt="" title="JsTestDriver-4" width="496" height="133" class="alignnone size-full wp-image-5860"></a></p>
+                            <p>点亮浏览器（点击灰色的浏览器图标）：</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-5" rel="attachment wp-att-5861"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-5.png" alt="" title="JsTestDriver-5" width="322" height="91" class="alignnone size-full wp-image-5861"></a></p>
+                            <p>再按“shift+F10”运行之，如果出现类似以下界面，说明运行成功：</p>
+                            <p><a href="http://www.36ria.com/5855/jstestdriver-6" rel="attachment wp-att-5862"><img src="http://www.36ria.com/wp-content/uploads/2012/11/JsTestDriver-6.png" alt="" title="JsTestDriver-6" width="687" height="166" class="alignnone size-full wp-image-5862"></a></p>
+                            <p>Webstorm的确强大，给我们提供了众多便利，就单元测试而言JsTestDriver只是第一步，关键还是开发者将单元测试写起来！以后会给大家分享单测代码层面的最佳实践。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bb-item" id="nodejs">
+                <div class="content  J_Content">
+                    <div class="scroller">
+                            <p>Webstorm作为个javascript的IDE，提供了最天然的NodeJs支持，在Webstorm中，您可以运行、调试、自动提示NodeJs。</p>
+                            <h2>Webstorm对NodeJs的支持</h2>
+                            <p>随便建个demo工程，建个<strong>runner.js</strong>，代码如下：</p>
+                            <div><div id="highlighter_341344" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">http = require(</code><code class="js string">'http'</code><code class="js plain">);</code></div><div class="line number2 index1 alt1"><code class="js plain">server = http.createServer(</code><code class="js keyword">function</code> <code class="js plain">(req, res) {</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">res.writeHeader(200, {</code><code class="js string">"Content-Type"</code><code class="js plain">: </code><code class="js string">"text/plain"</code><code class="js plain">});</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">res.end(</code><code class="js string">"Hello World！"</code><code class="js plain">);</code></div><div class="line number5 index4 alt2"><code class="js plain">});</code></div><div class="line number6 index5 alt1"><code class="js plain">server.listen(7070);</code></div><div class="line number7 index6 alt2"><code class="js plain">console.log(</code><code class="js string">"httpd start @7070"</code><code class="js plain">);</code></div></div></td></tr></tbody></table></div></div>
+                            <p>创建一个http请求，打印出”Hello World！”字符串。</p>
+                            <p>有多种方式可以将工程配置成Nodejs工程，最简单的方式如下：</p>
+                            <p>在代码区域，使用“alt+enter”</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs" rel="attachment wp-att-5870"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs.png" alt="" title="nodejs" width="522" height="349" class="alignnone size-full wp-image-5870"></a></p>
+                            <p>在代码区域，右键点击下</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs-1" rel="attachment wp-att-5871"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs-1.png" alt="" title="nodejs-1" width="316" height="213" class="alignnone size-full wp-image-5871"></a></p>
+                            <p>采用默认的配置创建个nodejs服务器</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs-2" rel="attachment wp-att-5872"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs-2.png" alt="" title="nodejs-2" width="391" height="235" class="alignnone size-full wp-image-5872"></a></p>
+                            <p>使用“ctrl+shift+F10”，运行Node脚本：</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs-3" rel="attachment wp-att-5873"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs-3.png" alt="" title="nodejs-3" width="392" height="175" class="alignnone size-full wp-image-5873"></a></p>
+                            <p>从上图可以看到Webstorm集成了Node控制台，可以直接打印出Node消息。</p>
+                            <h5>断点调试Node</h5>
+                            <p>断点功能非常实用，堪称调试利器。</p>
+                            <p>在你需要打断点的代码行前面点击下即可：</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs-5" rel="attachment wp-att-5878"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs-5.png" alt="" title="nodejs-5" width="254" height="184" class="alignnone size-full wp-image-5878"></a></p>
+                            <p>使用快捷键“shift+F9”，开始debug：</p>
+                            <p><a href="http://www.36ria.com/5869/nodejs-4" rel="attachment wp-att-5877"><img src="http://www.36ria.com/wp-content/uploads/2012/11/nodejs-4.png" alt="" title="nodejs-4" width="490" height="241" class="alignnone size-full wp-image-5877"></a></p>
+                            <h2>Webstorm对Zen Coding的支持</h2>
+                            <h5>什么是Zen Coding？</h5>
+                            <p>使用仿CSS选择器的语法来简化html的编写，大多数编辑器都提供了Zen Coding的支持，Zen Coding的用法可以看下面的gif：</p>
+                            <p><img alt="" src="http://imgsrc.baidu.com/baike/pic/item/bbe0d31196ae8a29b9127bc4.jpg" class="alignnone" width="404" height="333"></p>
+                            <h2>Webstorm对coffeescript的支持</h2>
+                            <p>在demo工程中新建一个test.coffee,</p>
+                            <p>在代码区域右键点击：</p>
+                            <p><a href="http://www.36ria.com/5869/coffeescript-1" rel="attachment wp-att-5879"><img src="http://www.36ria.com/wp-content/uploads/2012/11/coffeescript-1.png" alt="" title="coffeescript-1" width="310" height="223" class="alignnone size-full wp-image-5879"></a></p>
+                            <p>需要指定下coffeescript的插件：</p>
+                            <p><a href="http://www.36ria.com/5869/coffeescript-2" rel="attachment wp-att-5880"><img src="http://www.36ria.com/wp-content/uploads/2012/11/coffeescript-2.png" alt="" title="coffeescript-2" width="378" height="122" class="alignnone size-full wp-image-5880"></a></p>
+                            <p>接下来就可以使用coffeescript来写nodejs的代码。</p>
+                            <div><div id="highlighter_678774" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">square = (x) -&gt; x * x</code></div><div class="line number2 index1 alt1"><code class="js plain">console.log square(10)</code></div></div></td></tr></tbody></table></div></div>
+                            <p>点击运行，控制台会打印出100。</p>
+                            <h5>预览coffeescript编译后的js代码</h5>
+                            <p><a href="http://www.36ria.com/5869/coffeescript-3" rel="attachment wp-att-5881"><img src="http://www.36ria.com/wp-content/uploads/2012/11/coffeescript-3.png" alt="" title="coffeescript-3" width="302" height="161" class="alignnone size-full wp-image-5881"></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bb-item" id="qa">
+                <div class="content  J_Content">
+                    <div class="scroller">
+                        <h2>Q&A</h2>
+                            <h3>idea/webstorm/phpstorm的区别？</h3>
+                            <p>相同点：三者的界面和操作基本一样，配置文件可以通用（插件不一定通用）。</p>
+                            <p><strong>功能全面性：webstorm &lt; phpstorm &lt; idea</strong></p>
+                            <p>idea拥有最强大的功能，比如自带了ant（webstorm 没有）。</p>
+                            <p><strong>启动速度：idea &lt; phpstorm &lt; webstorm</strong></p>
+                            <p>实际上三者的启动速度相差不大（idea去掉前端无用的插件情况下），都是比较慢的。</p>
+                            <p><strong>前端支持度：idea = phpstorm &lt; webstorm</strong></p>
+                            <p>webstorm面向的用户就是前端工程师，所以会第一时间集成前端新的技术点，比如js单元测试、nodejs、coffeescript等，idea只是以插件的形式出现，选择安装。</p>
+                            <p><strong>易用性：idea &lt; phpstorm &lt; webstorm</strong></p>
+                            <p>webstorm因为最简单、功能最少，所以更为易用。</p>
+                            <p><strong>插件数：webstorm &lt; phpstorm &lt; idea</strong></p>
+                            <p>留意一般webstorm和phpstorm能用的插件，idea都能用，但idea能用的webstorm不一定能用，比如ant插件。</p>
+                            <h3>Webstorm的配置目录在哪？</h3>
+                            <p>比如明河的机子的配置是在：<code>C:\Users\Administrator\.WebIde50\config</code>，可以在里面找到所有的配置。</p>
+                            <h3>Webstorm都有那些快速查找方法？</h3>
+                            <h3>Webstorm可以使用vim？</h3>
+                            <p>很多vim的使用者转到Webstorm非常不习惯，其实在Webstorm试可以使用vim快捷键的，你只需要安装下vim插件即可。</p>
+                            <p><a href="http://www.36ria.com/5884/vim" rel="attachment wp-att-5892"><img src="http://www.36ria.com/wp-content/uploads/2012/12/vim.png" alt="" title="vim" width="420" height="190" class="alignnone size-full wp-image-5892"></a></p>
+                            <h3>缺失的ant打包工具</h3>
+                            <p>Webstorm有个缺陷，少了ant构建工具，目前没有很好的解决方案（明河的机子会装个idea）。</p>
+                            <p>ant比较笨重，构建前端工程有些大材小用，速度也不理想，建议打包工具换成<a href="https://github.com/gruntjs/grunt" target="_blank">grunt</a>。</p>
+                            <h3>关于live editor？</h3>
+                            <p>live editor是webstorm5.0主推的功能，当你修改完代码后，立即在浏览器上刷新出结果，不用手动刷新页面。详细说明可以看<a href="http://blog.jetbrains.com/webide/2012/08/liveedit-plugin-features-in-detail/" target="_blank">《liveedit-plugin-features-in-detail》</a></p>
+                            <h3>使用Webstorm自带的debugger工具，还是使用浏览器调试工具？</h3>
+                            <p>Webstorm自带了js的debugger工具，教程可以看<a href="http://www.jetbrains.com/webstorm/documentation/index.html" target="_blank">《Local JavaScript debugging》</a>，明河不是特别推荐使用，因为chrome或firefox上都有更为强大的调试工具。</p>
+                            <h3>如何连接远程服务器？</h3>
+                            <p>可以看<a href="http://www.jetbrains.com/webstorm/documentation/index.html" target="_blank">《Working with remote project》</a>这个视频教程，速度很慢，需要耐心等待，明河简单说明下。</p>
+                            <p><a href="http://www.36ria.com/5884/webstorm-1-2" rel="attachment wp-att-5893"><img src="http://www.36ria.com/wp-content/uploads/2012/12/webstorm-1.png" alt="" title="webstorm-1" width="411" height="101" class="alignnone size-full wp-image-5893"></a></p>
+                            <p>很多朋友没找到入口，其实是点击“create new project form existing files”。</p>
+                            <p><a href="http://www.36ria.com/5884/webstorm-2-2" rel="attachment wp-att-5894"><img src="http://www.36ria.com/wp-content/uploads/2012/12/webstorm-2.png" alt="" title="webstorm-2" width="463" height="214" class="alignnone size-full wp-image-5894"></a></p>
+                            <p><a href="http://www.36ria.com/5884/webstorm-3-2" rel="attachment wp-att-5895"><img src="http://www.36ria.com/wp-content/uploads/2012/12/webstorm-3.png" alt="" title="webstorm-3" width="358" height="289" class="alignnone size-full wp-image-5895"></a></p>
+                            <h3>如何给不支持的格式文件制定文件解析方式？</h3>
+                            <p>比如webstorm不支持<strong>.vm</strong>模版的高亮，我们可以把.vm文件解析成.html文件。<br>
+                                做法如下：</p>
+                            <p>使用“ctrl+shift+a”，搜索“file types”，就可以找到文件模版的配置，在html类型中加上*.vm即可。</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <span id="bb-nav-prev" class="page-arrow">&larr;</span>
@@ -198,17 +946,18 @@
 
 </div>
 <!-- /container -->
+<!-- 代码高亮 START  -->
+<link href='assets/syntaxhighlighter_3.0.83/sh.css' rel='stylesheet' type='text/css'/>
+<script type="text/javascript" src="assets/syntaxhighlighter_3.0.83/sh.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 代码高亮 END  -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="assets/jquery.plugins.js"></script>
 <script src="assets/facebox.js"></script>
 <script src="./assets/page.js"></script>
 <script>
-    $(function () {
-
-        Page.init();
-
-    });
+    Page.init();
 </script>
 </body>
 </html>

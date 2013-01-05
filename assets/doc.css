@@ -1693,3 +1693,55 @@ h3{
     right:10px;
     top:10px;
 }
+
+.content table {
+    margin-top: 16px;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: separate;
+    *border-collapse: collapsed;
+    border-left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-bottom:none;
+}
+
+.content table img {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.content table td {
+    line-height: 24px;
+    padding: 6px 12px;
+    border-bottom: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    text-align: left;
+    vertical-align: top;
+}
+
+.content table td a {
+    color: #663399 !important;
+}
+
+.content table td a:hover {
+    color: #333 !important;
+}
+
+.content table td strong {
+    color: #333;
+}
+.single-post .content table td p {
+    text-indent: 0;
+}
+.content table thead tr td strong {
+    font-size: 14px;
+    font-weight: bold;
+}
+.content table tbody tr {
+    background-color: #F9F9F9;
+}
+.content table tbody tr:nth-child(2n) {
+    background-color: white;
+}
