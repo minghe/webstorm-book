@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7500cffb-ad93-4c84-837b-1118daac9eab" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/closelabel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/facebox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/facebox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/doc.css" afterPath="$PROJECT_DIR$/assets/doc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/page.js" afterPath="$PROJECT_DIR$/assets/page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
@@ -24,10 +29,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="46" selection-start="875" selection-end="875" vertical-scroll-proportion="0.034722224">
+            <state line="22" column="26" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-7.6923075">
               <folding />
             </state>
           </provider>
@@ -36,7 +41,31 @@
       <file leaf-file-name="doc.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="80" selection-start="4962" selection-end="4962" vertical-scroll-proportion="0.0">
+            <state line="358" column="24" selection-start="6110" selection-end="6110" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebox.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/facebox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="73" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6178862">
+              <folding>
+                <marker date="1357358667932" expanded="true" signature="2730:2743" placeholder="..." />
+                <marker date="1357358667932" expanded="true" signature="2744:2966" placeholder="..." />
+                <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
+                <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
+                <marker date="1357358667932" expanded="true" signature="2804:2821" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebox.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/facebox.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="10" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -45,7 +74,7 @@
       <file leaf-file-name="page.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="95" selection-start="3622" selection-end="3622" vertical-scroll-proportion="0.0">
+            <state line="106" column="33" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,9 +110,11 @@
         <option value="$PROJECT_DIR$/assets/bookblock.css" />
         <option value="$PROJECT_DIR$/assets/custom.css" />
         <option value="$PROJECT_DIR$/assets/jquery.mousewheel.js" />
-        <option value="$PROJECT_DIR$/assets/doc.css" />
         <option value="$PROJECT_DIR$/assets/page.js" />
+        <option value="$PROJECT_DIR$/assets/facebox.css" />
+        <option value="$PROJECT_DIR$/assets/doc.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/facebox.js" />
       </list>
     </option>
   </component>
@@ -107,7 +138,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -118,18 +149,74 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webstorm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jasmine-kissy/src/jasmine-kissy.js" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\www\htdocs\book\webstorm\assets\images" />
+      <recent name="D:\www\htdocs\book\webstorm\assets" />
       <recent name="D:\www\htdocs\book\webstorm" />
     </key>
   </component>
@@ -154,10 +241,10 @@
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23380491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23309466" sideWeight="0.67082685" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -208,7 +295,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -222,11 +309,24 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="assets" />
+    <MESSAGE value="doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/jquery.plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="884" column="9" selection-start="45144" selection-end="45144" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1357198242763" expanded="false" signature="41956:41962" placeholder="..." />
+            <marker date="1357198242763" expanded="false" signature="43351:43356" placeholder="..." />
+            <marker date="1357198242763" expanded="false" signature="43641:43647" placeholder="..." />
+            <marker date="1357198242763" expanded="false" signature="44603:44608" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="46" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
@@ -293,13 +393,6 @@
         <state line="248" column="13" selection-start="11718" selection-end="11753" vertical-scroll-proportion="0.034722224" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/doc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="80" selection-start="4962" selection-end="4962" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/jquery.plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="884" column="9" selection-start="45144" selection-end="45144" vertical-scroll-proportion="0.0">
@@ -314,15 +407,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="95" selection-start="3622" selection-end="3622" vertical-scroll-proportion="0.0">
+        <state line="106" column="33" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/doc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="358" column="24" selection-start="6110" selection-end="6110" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/facebox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="10" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="46" selection-start="875" selection-end="875" vertical-scroll-proportion="0.034722224">
+        <state line="22" column="26" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-7.6923075">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/facebox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="73" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6178862">
+          <folding>
+            <marker date="1357358667932" expanded="true" signature="2730:2743" placeholder="..." />
+            <marker date="1357358667932" expanded="true" signature="2744:2966" placeholder="..." />
+            <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
+            <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
+            <marker date="1357358667932" expanded="true" signature="2804:2821" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

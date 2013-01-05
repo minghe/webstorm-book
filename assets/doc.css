@@ -315,20 +315,11 @@ a:hover {
 	text-shadow: none;
 }
 
-.bb-custom-wrapper nav {
-	top: 20px;
-	left: 60px;
-	position: absolute;
-	z-index: 1000;
-}
-
-.bb-custom-wrapper nav span,
+.page-arrow,
 .menu-button {
 	position: absolute;
 	width: 32px;
 	height: 30px;
-	top: 2px;
-	left: 0;
 	background: #574192;
 	border-radius: 50%;
 	color: #fff;
@@ -338,25 +329,79 @@ a:hover {
 	font-weight: bold;
 	cursor: pointer;
     font-size: 22px;
+    display: block;
 }
 
-.bb-custom-wrapper nav span:hover,
+.tb-btn{
+    top: 2px;
+    left: 0;
+}
+.page-arrow{
+    opacity: 0.5;
+    margin-top:-50px;
+    top:50%;
+}
+.page-arrow:hover{
+    opacity: 1;
+}
 .menu-button:hover {
 	background: #000;
 }
-
-.bb-custom-wrapper nav span:last-child {
-	left: 40px;
+.bb-custom-wrapper .keyboard{
+    left:60px;
+    top:20px;
+    z-index: 500;
+}
+.bb-custom-wrapper .keyboard img{
+    border:none;
+    margin:0;
+    padding:0;
+    padding-bottom:10px;
+}
+#bb-nav-next{
+    right:65px;
+}
+#bb-nav-prev{
+    left:22px;
 }
 
-.menu-button {
+#facebox .content{
+    position: static;
+    width:500px;
+}
+#facebox h4 {
+    margin: 0 0 10px -10px;
+    padding: 0 10px 10px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #DDD !important;
+}
+dl.keyboard-mappings dt {
+    display: inline-block;
+    margin: 0;
+    padding: 3px 6px;
+    min-width: 10px;
+    text-align: center;
+    font-family: Monaco, "Liberation Mono", Courier, monospace;
+    background: #333;
+    color: #EEE;
+    border-radius: 2px;
+    text-shadow: 1px 1px 0 black;
+}
+
+dl.keyboard-mappings dd {
+    display: inline;
+    margin: 0 0 0 5px;
+    color: #666;
+}
+
+.tb-btn{
 	z-index: 1000;
 	left: 20px;
 	top: 20px;
 	text-indent: -9000px;
 }
 
-.menu-button:after {
+.tb-btn:after {
 	position: absolute;
 	content: '';
 	width: 50%;
@@ -367,6 +412,8 @@ a:hover {
 	left: 25%;
 	box-shadow: 0 -4px #fff, 0 4px #fff;
 }
+
+
 
 .no-js .bb-custom-wrapper nav span,
 .no-js .menu-button {
@@ -1639,4 +1686,10 @@ h3{
 }
 .bb-item a.btn-download:hover{
     background-position: 0 -57px;
+}
+
+.right-btns{
+    position: absolute;
+    right:10px;
+    top:10px;
 }

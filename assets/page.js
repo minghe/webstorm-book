@@ -39,6 +39,28 @@ var Page = (function() {
         transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
         supportTransitions = Modernizr.csstransitions;
 
+    //控制箭头的显影
+    var $contents = $('.J_Content');
+    $contents.hover(function(){
+        displayArrow(true);
+    },function(){
+        displayArrow(false);
+    });
+    $navNext.on('mouseover',function(){
+        displayArrow(true);
+    });
+    $navPrev.on('mouseover',function(){
+        displayArrow(true);
+    });
+    /**
+     * 控制箭头的显影
+     */
+    function displayArrow(isShow){
+        var zIndex = isShow && 500 || -1;
+        $navNext.css('zIndex',zIndex);
+        $navPrev.css('zIndex',zIndex);
+    }
+
     function init() {
 
         // initialize jScrollPane on the content div of the first item
@@ -82,7 +104,13 @@ var Page = (function() {
 
         // show table of contents
         $tblcontents.on( 'click', toggleTOC );
+        $('#J_Keyboard').facebox();
 
+        $(document).keydown(function(ev){
+             if(ev.keyCode == 77){
+                 $tblcontents.trigger('click');
+             }
+        });
         // click a menu item
         $menuItems.on( 'click', function() {
 
