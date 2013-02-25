@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7500cffb-ad93-4c84-837b-1118daac9eab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/closelabel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/facebox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/facebox.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/doc.css" afterPath="$PROJECT_DIR$/assets/doc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/page.js" afterPath="$PROJECT_DIR$/assets/page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="webstorm.iws" />
@@ -29,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="26" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-7.6923075">
+            <state line="84" column="168" selection-start="4417" selection-end="4417" vertical-scroll-proportion="0.8088235">
               <folding />
             </state>
           </provider>
@@ -41,20 +35,19 @@
       <file leaf-file-name="doc.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/doc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="358" column="24" selection-start="6110" selection-end="6110" vertical-scroll-proportion="0.0">
+            <state line="1742" column="37" selection-start="34297" selection-end="34297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebox.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="facebox.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/facebox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="73" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6178862">
+            <state line="94" column="86" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1357358667932" expanded="true" signature="2730:2743" placeholder="..." />
                 <marker date="1357358667932" expanded="true" signature="2744:2966" placeholder="..." />
-                <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
                 <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
                 <marker date="1357358667932" expanded="true" signature="2804:2821" placeholder="..." />
               </folding>
@@ -112,17 +105,17 @@
         <option value="$PROJECT_DIR$/assets/jquery.mousewheel.js" />
         <option value="$PROJECT_DIR$/assets/page.js" />
         <option value="$PROJECT_DIR$/assets/facebox.css" />
+        <option value="$PROJECT_DIR$/assets/facebox.js" />
         <option value="$PROJECT_DIR$/assets/doc.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/facebox.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="776" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -150,7 +143,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -169,49 +161,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webstorm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webstorm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webstorm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webstorm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jasmine-kissy/src/jasmine-kissy.js" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -224,6 +185,24 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7500cffb-ad93-4c84-837b-1118daac9eab" name="Default" comment="" />
@@ -234,17 +213,25 @@
       <created>1357198558483</created>
       <updated>1357198558483</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="doc">
+      <created>1357358685170</created>
+      <updated>1357358685170</updated>
+    </task>
+    <task id="LOCAL-00003" summary="doc">
+      <created>1357371836641</created>
+      <updated>1357371836641</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23309466" sideWeight="0.67082685" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23306032" sideWeight="0.67082685" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -315,18 +302,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/jquery.plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="884" column="9" selection-start="45144" selection-end="45144" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1357198242763" expanded="false" signature="41956:41962" placeholder="..." />
-            <marker date="1357198242763" expanded="false" signature="43351:43356" placeholder="..." />
-            <marker date="1357198242763" expanded="false" signature="43641:43647" placeholder="..." />
-            <marker date="1357198242763" expanded="false" signature="44603:44608" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="46" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0">
@@ -388,11 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../gallery/gallery/form/1.4/demo/form/uploader/imageUploader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="13" selection-start="11718" selection-end="11753" vertical-scroll-proportion="0.034722224" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/jquery.plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="884" column="9" selection-start="45144" selection-end="45144" vertical-scroll-proportion="0.0">
@@ -412,13 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/doc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="24" selection-start="6110" selection-end="6110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/facebox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="10" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
@@ -426,23 +389,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="1019" selection-end="1019" vertical-scroll-proportion="-7.6923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/facebox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="73" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6178862">
+        <state line="94" column="86" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1357358667932" expanded="true" signature="2730:2743" placeholder="..." />
             <marker date="1357358667932" expanded="true" signature="2744:2966" placeholder="..." />
             <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
-            <marker date="1357358667932" expanded="true" signature="2772:2953" placeholder="..." />
             <marker date="1357358667932" expanded="true" signature="2804:2821" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ria/wp-content/themes/36ria3.0/style.source.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1436" column="0" selection-start="27542" selection-end="28494" vertical-scroll-proportion="0.3495935" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/doc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1742" column="37" selection-start="34297" selection-end="34297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gallery/gallery/form/1.4/demo/form/uploader/imageUploader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1472" column="0" selection-start="58024" selection-end="58312" vertical-scroll-proportion="0.5138889" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="168" selection-start="4417" selection-end="4417" vertical-scroll-proportion="0.8088235">
+          <folding />
         </state>
       </provider>
     </entry>
