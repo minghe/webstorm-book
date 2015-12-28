@@ -1,5 +1,7 @@
 # webstorm 入门指南
 
+[图书在线阅读](http://book.apebook.org/minghe/webstorm/index.html)
+
 Webstorm 是目前最好的前端IDE，拥有即时编辑（chrome）、自动完成、debugger、Zen Coding、HTML5支持、JSLint、Less支持、CoffeeScript支持、Node.JS、单元测试、集成git和svn版本控制等特性
 
 《webstorm 入门指南》整理自我在博客“RIA之家”写的 webstorm 系列教程。
