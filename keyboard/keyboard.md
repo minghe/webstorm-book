@@ -1,13 +1,25 @@
-# 常用快捷键
+# 快捷键
 
-<p>提高代码编写效率，离不开快捷键的使用，Webstorm拥有丰富的代码快速编辑功能，你可以自由配置功能快捷键。</p>
-<h2>快捷键配置</h2>
-<p>点击“File”-&gt; “settings”</p>
-<p><a href="http://www.36ria.com/5700/%e6%88%aa%e5%9b%be00-3" rel="attachment wp-att-5743"><img src="http://www.36ria.com/wp-content/uploads/2012/10/截图00.png" alt="" title="截图00" width="641" height="278" class="alignnone size-full wp-image-5743"></a></p>
-<p>Webstorm预置了其他编辑器的快捷键配置，可以点击</p>
-<p><a href="http://www.36ria.com/5700/keymaps" rel="attachment wp-att-5744"><img src="http://www.36ria.com/wp-content/uploads/2012/10/keymaps.png" alt="" title="keymaps" width="266" height="219" class="alignnone size-full wp-image-5744"></a></p>
-<h2>默认配置下的常用快捷键</h2>
+查看快捷键，在设置界面中搜索 "keymap"：
+
+![./1.png](./1.png)
+
+## 设置自己的快捷键
+
+比如将代码变更 commit ，webstorm 默认是没有配置快捷键的，我们设置个 shift + c 。
+
+搜索 commit ：
+
+![./2.png](./2.png)
+
+找到操作项后，添加个新的快捷键，如果快捷键有冲突，webstorm 会有提示。
+
+## 默认配置下的常用快捷键
+
+mac book 下文的 ctrl 替换成 command 键。
+
 <h3>查找/代替</h3>
+
 <table border="0" cellspacing="0" cellpadding="0" class="tab1">
     <colgroup>
         <col width="160">
