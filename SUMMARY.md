@@ -4,7 +4,7 @@
 * [工程和界面](ui/ui.md)
 * [插件的使用](plugins/plugins.md)
 * [快捷键](keyboard/keyboard.md)
-* [git集成](git.md)
+* [git 版本控制](git/git.md)
 * [利用jsdoc提高自动提示](jsdoc.md)
 * [JsTestDriver的使用](test.md)
 * [nodejs](node.md)
