@@ -7,6 +7,5 @@
 * [git 版本控制](git/git.md)
 * [代码模板](template/template.md)
 * [利用 jsdoc 提高自动提示](jsdoc/jsdoc.md)
-* [JsTestDriver的使用](test.md)
+* [JsTestDriver 的使用](test/test.md)
 * [nodejs](node.md)
-* [Q&A](qa.md)
